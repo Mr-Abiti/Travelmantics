@@ -37,7 +37,7 @@ public class FirebaseUtil {
     public static void openFbReference(String ref, final ListActivity callerActivity) {
         if (firebaseUtil == null) {
             firebaseUtil = new FirebaseUtil();
-            //mFirebaseAuth = FirebaseAuth.getInstance();
+            mFirebaseAuth = FirebaseAuth.getInstance();
             caller = callerActivity;
 
             mAuthListener = new FirebaseAuth.AuthStateListener() {
