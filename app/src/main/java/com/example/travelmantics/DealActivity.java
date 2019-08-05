@@ -39,10 +39,10 @@ public class DealActivity extends AppCompatActivity {
         setContentView(R.layout.insert_deal);
         mFirebaseDatabase = FirebaseUtil.mFirebaseDatabase;
         mDatabaseReference = FirebaseUtil.mDatabaseReference;
-        txtTitle = (EditText) findViewById(R.id.txtTitle);
-        txtDescription = (EditText) findViewById(R.id.txtDescription);
-        txtPrice = (EditText) findViewById(R.id.txtPrice);
-        imageView = (ImageView) findViewById(R.id.image);
+        txtTitle = findViewById(R.id.txtTitle);
+        txtDescription = findViewById(R.id.txtDescription);
+        txtPrice = findViewById(R.id.txtPrice);
+        imageView = findViewById(R.id.image);
         Intent intent = getIntent();
         TravelDeal deal = (TravelDeal) intent.getSerializableExtra("Deal");
         if (deal==null) {

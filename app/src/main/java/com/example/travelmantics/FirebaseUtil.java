@@ -1,10 +1,8 @@
 package com.example.travelmantics;
 
-import android.app.Activity;
-import android.support.annotation.NonNull;
-import android.util.Log;
-import android.widget.Toast;
 
+import android.support.annotation.NonNull;
+import android.widget.Toast;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
@@ -33,7 +31,6 @@ public class FirebaseUtil {
     private FirebaseUtil(){};
     public static boolean isAdmin;
 
-
     public static void openFbReference(String ref, final ListActivity callerActivity) {
         if (firebaseUtil == null) {
             firebaseUtil = new FirebaseUtil();
@@ -54,7 +51,6 @@ public class FirebaseUtil {
                 }
             };
             connectStorage();
-
         }
 
         mDeals = new ArrayList<TravelDeal>();
@@ -62,12 +58,9 @@ public class FirebaseUtil {
     }
 
     private static void signIn() {
-        // Choose authentication providers
         List<AuthUI.IdpConfig> providers = Arrays.asList(
                 new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build(),
                 new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build());
-
-// Create and launch sign-in intent
         caller.startActivityForResult(
                 AuthUI.getInstance()
                         .createSignInIntentBuilder()
